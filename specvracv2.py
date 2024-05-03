@@ -38,7 +38,7 @@ def main():
             elif submit_button:
                 st.error("Échec de la connexion. Veuillez réessayer.")
 
-if st.session_state['logged_in']=True(
+for st.session_state['logged_in']=True(
 
     def ask_openai(question, api_key, assistant_id):
         response = openai.ChatCompletion.create(
