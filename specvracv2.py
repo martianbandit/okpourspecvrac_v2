@@ -1,6 +1,14 @@
 import streamlit as st
+import openai
 
-st.title("Bienvenue sur l'application de chat IA de Le Spéc:rainbow['IA']liste du Vrac")
+
+st.set_page_config(page_icon="./images/favicon.ico")
+st.sidebar.title("Configuration du Chatbot")
+st.title("Bienvenue sur l'application de chat IA de Le Spéc:rainbow['IA']liste du Vrac 🌱")
+
+st.sidebar.write("inserrer votre cle API 🔑 de openAI et l'ID de votre assistant OpenAI ici
+api_key = st.sidebar.text_input("Clé API de OpenAI")
+assistant_id = st.sidebar.text_input("ID de l'assistant")
 
 def login_user(username):
     # Simule une vérification de l'identifiant utilisateur
@@ -13,7 +21,7 @@ def main():
         st.session_state['logged_in'] = False
 
     if st.session_state['logged_in']:
-        st.success(f"Vous êtes connecté en tant que {st.session_state['username']}!")
+        st.success(f"Vous êtes connecté en tant que 🛻 {st.session_state['username']}!")
         st.button("Se déconnecter", on_click=lambda: st.session_state.update(logged_in=False, username=None))
     else:
         with st.form("login_form"):
