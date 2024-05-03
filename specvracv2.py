@@ -1,6 +1,5 @@
 import streamlit as st
-from openai import OpenAI
-
+import openai
 
 st.set_page_config(page_icon="./images/favicon.ico")
 st.sidebar.title("Configuration du Chatbot")
