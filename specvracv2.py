@@ -1,6 +1,8 @@
 import streamlit as st
 import openai
 
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+
 st.set_page_config(page_icon="./images/favicon.ico")
 st.sidebar.title(":wrench:Configuration du Chatbot")
 st.sidebar.image("./favicon.ico")
@@ -10,10 +12,6 @@ st.sidebar.write("inserrer votre cle API 🔑 de openAI et l'ID de votre assista
 api_key = st.sidebar.text_input("Clé API de OpenAI")
 st.sidebar.warning("(Assurez-vous d'inserrer la meme clé API lors de la création de l'assistant qui correspond a votre assistant)")
 assistant_id = st.sidebar.text_input("ID de l'assistant")
-add_slider = st.sidebar.slider(
-    'Temperature',
-    0.00, 1.00, (0.00, 1.0, .30)
-)
 
 def login_user(username):
     # Simule une vérification de l'identifiant utilisateur
