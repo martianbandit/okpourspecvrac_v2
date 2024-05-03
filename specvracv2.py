@@ -3,7 +3,7 @@ import openai
 
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
-st.set_page_config(page_icon="./images/favicon.ico")
+st.set_page_config(page_icon="./favicon.ico")
 st.sidebar.title(":wrench:Configuration du Chatbot")
 st.sidebar.image("./favicon.ico")
 st.title("Bienvenue sur l'application de chat IA :robot:: de Le Spéc:rainbow['IA']liste du Vrac 🌱")
