@@ -2,15 +2,22 @@ import streamlit as st
 import openai
 
 st.set_page_config(page_icon="./images/favicon.ico")
-st.sidebar.title("Configuration du Chatbot :wrench:")
+st.sidebar.title(":wrench:Configuration du Chatbot")
+st.sidebar.image("./favicon.ico")
 st.title("Bienvenue sur l'application de chat IA :robot:: de Le Spéc:rainbow['IA']liste du Vrac 🌱")
 
 st.sidebar.write("inserrer votre cle API 🔑 de openAI et l'ID de votre assistant OpenAI ici ⬇️")
 api_key = st.sidebar.text_input("Clé API de OpenAI")
 st.sidebar.warning("(Assurez-vous d'inserrer la meme clé API lors de la création de l'assistant qui correspond a votre assistant)")
 assistant_id = st.sidebar.text_input("ID de l'assistant")
-
-
+add_slider = st.sidebar.slider(
+    'Temperature',
+    0.00, 1.00, (0.00, 1.0, .30)
+)
+add_slider = st.sidebar.slider(
+    'Select a range of values',
+    0.0, 100.0, (25.0, 75.0)
+)
 
 def login_user(username):
     # Simule une vérification de l'identifiant utilisateur
@@ -38,7 +45,6 @@ def main():
             elif submit_button:
                 st.error("Échec de la connexion. Veuillez réessayer.")
 
-for st.session_state['logged_in'](
 
     def ask_openai(question, api_key, assistant_id):
         response = openai.ChatCompletion.create(
@@ -48,7 +54,9 @@ for st.session_state['logged_in'](
             system="assistant",
             assistant_id=assistant_id
     )
-)
+
+for st.session_state['logged_in']()
+
     return response.choices[0].message['content']
 if __name__ == "__main__":
     main()
