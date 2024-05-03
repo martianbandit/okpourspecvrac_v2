@@ -6,7 +6,7 @@ st.set_page_config(page_icon="./images/favicon.ico")
 st.sidebar.title("Configuration du Chatbot")
 st.title("Bienvenue sur l'application de chat IA de Le Spéc:rainbow['IA']liste du Vrac 🌱")
 
-st.sidebar.write("inserrer votre cle API 🔑 de openAI et l'ID de votre assistant OpenAI ici
+st.sidebar.write("inserrer votre cle API 🔑 de openAI et l'ID de votre assistant OpenAI ici ⬇️")
 api_key = st.sidebar.text_input("Clé API de OpenAI")
 assistant_id = st.sidebar.text_input("ID de l'assistant")
 
