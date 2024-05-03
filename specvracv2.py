@@ -14,10 +14,6 @@ add_slider = st.sidebar.slider(
     'Temperature',
     0.00, 1.00, (0.00, 1.0, .30)
 )
-add_slider = st.sidebar.slider(
-    'Select a range of values',
-    0.0, 100.0, (25.0, 75.0)
-)
 
 def login_user(username):
     # Simule une vérification de l'identifiant utilisateur
