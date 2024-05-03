@@ -2,7 +2,7 @@ import streamlit as st
 import openai
 
 st.set_page_config(page_icon="./favicon.ico")
-st.sidebar.title(":wrench:Configuration du Chatbot")
+st.sidebar.title(" :wrench: Configuration du Chatbot")
 st.sidebar.image("./favicon.ico")
 st.title("Bienvenue sur l'application de chat IA :robot:: de Le Spéc:rainbow['IA']liste du Vrac 🌱")
 
