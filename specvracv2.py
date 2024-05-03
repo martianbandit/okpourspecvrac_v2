@@ -1,5 +1,5 @@
 import streamlit as st
-from openai import assistant
+from openai import OpenAI
 
 
 st.set_page_config(page_icon="./images/favicon.ico")
