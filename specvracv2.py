@@ -49,8 +49,6 @@ def main():
             assistant_id=assistant_id
     )
 
-for st.session_state['logged_in']()
-
     return response.choices[0].message['content']
 if __name__ == "__main__":
     main()
