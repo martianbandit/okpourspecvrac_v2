@@ -7,7 +7,7 @@ st.title("Bienvenue sur l'application de chat IA :robot:: de Le Spéc:rainbow['I
 
 st.sidebar.write("inserrer votre cle API 🔑 de openAI et l'ID de votre assistant OpenAI ici ⬇️")
 api_key = st.sidebar.text_input("Clé API de OpenAI")
-st.sidebar.warning("(Assurez-vous que l'ID et la cle API correspondent)")
+st.sidebar.warning("(Assurez-vous d'inserrer la meme clé API lors de la création de l'assistant qui correspond a votre assistant)")
 assistant_id = st.sidebar.text_input("ID de l'assistant")
 
 
@@ -38,15 +38,17 @@ def main():
             elif submit_button:
                 st.error("Échec de la connexion. Veuillez réessayer.")
 
+if st.session_state=True(
 
-def ask_openai(question, api_key, assistant_id):
-    response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
-        messages=[{"role": "user", "content": question}],
-        api_key=api_key,
-        system="assistant",
-        assistant_id=assistant_id
+    def ask_openai(question, api_key, assistant_id):
+        response = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo",
+            messages=[{"role": "user", "content": question}],
+            api_key=api_key,
+            system="assistant",
+            assistant_id=assistant_id
     )
+)
     return response.choices[0].message['content']
 if __name__ == "__main__":
     main()
