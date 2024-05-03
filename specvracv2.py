@@ -10,6 +10,8 @@ st.sidebar.write("inserrer votre cle API 🔑 de openAI et l'ID de votre assista
 api_key = st.sidebar.text_input("Clé API de OpenAI")
 assistant_id = st.sidebar.text_input("ID de l'assistant")
 
+
+
 def login_user(username):
     # Simule une vérification de l'identifiant utilisateur
     return username == "admin"
@@ -36,6 +38,16 @@ def main():
             elif submit_button:
                 st.error("Échec de la connexion. Veuillez réessayer.")
 
+
+def ask_openai(question, api_key, assistant_id):
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=[{"role": "user", "content": question}],
+        api_key=api_key,
+        system="assistant",
+        assistant_id=assistant_id
+    )
+    return response.choices[0].message['content']
 if __name__ == "__main__":
     main()
 
