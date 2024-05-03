@@ -2,11 +2,12 @@ import streamlit as st
 import openai
 
 st.set_page_config(page_icon="./images/favicon.ico")
-st.sidebar.title("Configuration du Chatbot")
-st.title("Bienvenue sur l'application de chat IA de Le Spéc:rainbow['IA']liste du Vrac 🌱")
+st.sidebar.title("Configuration du Chatbot :wrench:")
+st.title("Bienvenue sur l'application de chat IA :robot:: de Le Spéc:rainbow['IA']liste du Vrac 🌱")
 
 st.sidebar.write("inserrer votre cle API 🔑 de openAI et l'ID de votre assistant OpenAI ici ⬇️")
 api_key = st.sidebar.text_input("Clé API de OpenAI")
+st.sidebar.warning("(Assurez-vous que l'ID et la cle API correspondent)")
 assistant_id = st.sidebar.text_input("ID de l'assistant")
 
 
